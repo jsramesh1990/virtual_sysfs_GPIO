@@ -28,4 +28,4 @@ make
 ## License
 Add an appropriate license file if needed (e.g. `LICENSE`).
 
-
+## Linux exposes GPIOs to user-space and how you can toggle or read them — both using sysfs (older method) and libgpiod (modern method).
