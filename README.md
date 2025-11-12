@@ -25,41 +25,6 @@ make
 - All `.c`, `.h`, `Makefile`, `simulator.py`, `test.sh`, `README.md`
 - `.gitignore` (provided)
 
- ** visual diagram of the virtual_sysfs_GPIO project**
-
-                   +-----------------------+
-                   |  virtual_sysfs_GPIO   |
-                   +-----------------------+
-                             |
-                             v
-                  +---------------------+
-                  |  GPIO Initialization |
-                  |  (sysfs / libgpiod) |
-                  +---------------------+
-                             |
-          ------------------------------------------
-          |                                        |
-          v                                        v
-+----------------------+                 +----------------------+
-|  Sysfs Interface     |                 |  libgpiod Interface  |
-|  (gpio-sysfs.c)      |                 |  (gpio-libgpiod.c)  |
-+----------------------+                 +----------------------+
-          |                                        |
-          | Export GPIOs, set direction           | Open GPIO chip, request line
-          | Write/read 0/1                        | Set value 0/1
-          v                                        v
-+---------------------------------------------------------+
-|                 LED / GPIO Simulation                  |
-|  (simulator.py for visualization or test.sh for auto) |
-+---------------------------------------------------------+
-                             |
-                             v
-                   +-----------------------+
-                   |     Test / Verify     |
-                   |   Observe LED states  |
-                   +-----------------------+
-
-
 **Flow Explanation:**
 
 1.GPIO Initialization:
